@@ -3,7 +3,7 @@ name: Run YAML verification
 on:
   workflow_dispatch:
   workflow_run:
-    workflows: ["Run YAML verification"]
+    workflows: ["Run Python Files"]
     types:
       - completed
   push:
