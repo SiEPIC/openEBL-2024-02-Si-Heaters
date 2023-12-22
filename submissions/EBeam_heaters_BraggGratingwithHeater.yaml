@@ -3,7 +3,7 @@ Devices:
     DeviceID: BraggGratingwithHeater,comment,comment
     Electrical Coordinates: []
     Optical Coordinates:
-    - 50.0
+    - 50.00
     - 303.0
     Polarization: TE
     RoutineCheck: true
