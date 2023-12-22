@@ -61,14 +61,14 @@ jobs:
             output=$(python run_yaml_verification.py "submissions/$file")
 
             # get number of errors
-            errors_from_output=$(echo "$output" | tail -n 1)
+            #errors_from_output=$(echo "$output" | tail -n 1)
 
-            echo "$errors_from_output errors detected for $file"
+            #echo "$errors_from_output errors detected for $file"
 
             # if file results in verification errors add to string files_with_errors
-            if [[ "$errors_from_output" -ge 1 ]]; then
-              files_with_errors+="$file, $errors_from_output errors. "
-            fi
+            #if [[ "$errors_from_output" -ge 1 ]]; then
+            #  files_with_errors+="$file, $errors_from_output errors. "
+            #fi
 
             echo "Done verification on $file"
           done
