@@ -16,9 +16,9 @@ Output
 
 # configuration
 tech_name = 'EBeam'
-top_cell_name = 'EBeam_2024_02'
-cell_Width = 605000
-cell_Height = 410000
+top_cell_name = 'EBeam_2024_02_Heaters'
+cell_Width = 440000
+cell_Height = 470000
 cell_Gap_Width = 8000
 cell_Gap_Height = 8000
 chip_Width = 8650000
@@ -32,10 +32,10 @@ tr_cutout_x = 7037000
 tr_cutout_y = 8494000
 
 filename_out = 'EBeam'
-layers_keep = ['1/0','1/10', '68/0', '81/0', '10/0', '99/0', '26/0', '31/0', '32/0', '33/0', '998/0']
+layers_keep = ['1/0', '1/10', '1/11', '11/0', '12/0', '13/0', '68/0', '81/0', '10/0', '99/0', '26/0', '31/0', '32/0', '33/0', '998/0']
 layer_text = '10/0'
 layer_SEM = '200/0'
-layer_SEM_allow = ['edX']  # which submission folder is allowed to include SEM images
+layer_SEM_allow = ['edXPhot1x']  # which submission folder is allowed to include SEM images
 dbu = 0.001
 log_siepictools = False
 framework_file = 'EBL_Framework_1cm_PCM_static.oas'
