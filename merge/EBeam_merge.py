@@ -36,6 +36,7 @@ layers_keep = ['1/0', '1/10', '1/11', '11/0', '12/0', '13/0', '68/0', '81/0', '1
 layer_text = '10/0'
 layer_SEM = '200/0'
 layer_SEM_allow = ['edXPhot1x']  # which submission folder is allowed to include SEM images
+layers_move = [[[31,0],[1,0]]] # move shapes from layer 1 to layer 2
 dbu = 0.001
 log_siepictools = False
 framework_file = 'EBL_Framework_1cm_PCM_static.oas'
@@ -293,9 +294,15 @@ coords_file.write(text_out)
 coords_file.close()
 '''
 
+# move layers
+for i in range(0,len(layers_move)):
+    layer1=layout.find_layer(*layers_move[i][0])
+    print(layer1)
+    layer2=layout.find_layer(*layers_move[i][1])
+    print(layer2)
+    layout.move_layer(layer1, layer2)
 
 
-# Export as-is layout, for UW fabrication
 log('')
 
 #export_layout (top_cell, path, filename='EBeam', relative_path='', format='gds')
