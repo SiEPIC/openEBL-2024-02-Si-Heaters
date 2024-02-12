@@ -56,6 +56,10 @@ The submission involves several steps. First, you need to create your design(s) 
  - Create a <a href="https://help.github.com/articles/using-pull-requests/">Pull Request</a> -- this will notify the team of your contribution, which we can aggregate into the main design file
  - Return to the main repository, and check for the merged design
 
+## Black-box cells (IP Replacement)
+- We perform IP replacement on several cells (grating couplers). We call these cells Black Box (BB), and you can identify them by _BB in the cell name, or the presence of the Blackbox layer 998/0 in the cell.
+- You must not change the name of the cell, the contents, nor cell origins. Otherwise, the replacement will not work correctly.
+
 ## Automated GitHub Actions
 
 1) Running the files in the "submissions/KLayout Python" folder, to generate the designs
