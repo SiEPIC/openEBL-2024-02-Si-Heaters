@@ -201,7 +201,7 @@ for f in [f for f in files_in if '.oas' in f.lower() or '.gds' in f.lower()]:
             break
 
 
-        if 'ebeam' in cell.name.lower() or num_top_cells == 1 or cell.name.lower() == 'top':
+        if num_top_cells == 1 or cell.name.lower() == 'top':
             log("  - top cell: %s" % cell.name)
 
             # check layout height
