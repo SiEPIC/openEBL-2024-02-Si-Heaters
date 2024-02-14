@@ -311,11 +311,13 @@ log("\nExecution time: %s seconds" % int((time.time() - start_time)))
 
 log_file.close()
 
-# Display the layout in KLayout, using KLayout Package "klive", which needs to be installed in the KLayout Application
-if Python_Env == 'Script':
-    from SiEPIC.utils import klive
-    klive.show(file_out, technology=tech_name)
-
+try:
+    # Display the layout in KLayout, using KLayout Package "klive", which needs to be installed in the KLayout Application
+    if Python_Env == 'Script':
+        from SiEPIC.utils import klive
+        klive.show(file_out, technology=tech_name)
+except:
+    pass
 
 print("KLayout EBeam_merge.py, completed in: %s seconds" % int((time.time() - start_time)))
 
